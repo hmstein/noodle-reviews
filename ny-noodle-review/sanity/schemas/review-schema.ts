@@ -25,10 +25,15 @@ const review = {
             type: 'image',
             options: { hotspot: true },
             fields: [{
-                name: 'alt',
-                title: 'Alt',
-                type: 'string'
-            }]
+                name: 'altText',
+                type: 'string',
+                title: 'Alternative text',
+              },]
+        },
+        {
+            name: 'tldr',
+            title: 'TL;DR',
+            type: 'string'
         },
         {
             name: 'content',
