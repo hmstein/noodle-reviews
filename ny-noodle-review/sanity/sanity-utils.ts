@@ -14,8 +14,27 @@ export async function getReview(slug: string): Promise<Review> {
         "image": image.asset->url,
         tldr,
         content,
-        restaurant,
-        dish
+        restaurant->{
+            _id,
+            _createdAt,
+            name,
+            website,
+            address {
+                address1,
+                address2,
+                city,
+                state,
+                zip
+            }
+        },
+        dish->{
+            _id,
+            _createdAt,
+            name,
+            description,
+            addOns,
+            pricePaid
+        }
       }`,
       { slug }
     )
